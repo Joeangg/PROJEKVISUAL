@@ -1,0 +1,39 @@
+==[IDE]== Apr 26, 2026 10:12:25 AM Initializing ...
+Initializing repository
+Creating git C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy/.git directory
+git init C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy
+==[IDE]== Apr 26, 2026 10:12:25 AM Initializing ... finished.
+==[IDE]== Apr 26, 2026 10:13:17 AM Committing...
+Git Commit
+----------
+git add C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\nbproject\genfiles.properties C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\data_supplier.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\nbproject\project.properties C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\produk.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\klinik\Klinik.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\bahan_dan_alat.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\nbproject\build-impl.xml C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\test\Tampilan.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\nbproject\project.xml C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\login.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\dokter.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\pasien.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\dashboard.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\treatment_layanan.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\pasien.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\data_supplier.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\logo\logo.jpg C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\produk.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\bahan_dan_alat.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\dokter.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\koneksi\koneksi.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\build.xml C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\treatment_layanan.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\login.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\test\Tampilan.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\manifest.mf C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\dashboard.java
+git commit -m tampilanform2 C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\nbproject\genfiles.properties C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\data_supplier.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\nbproject\project.properties C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\produk.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\klinik\Klinik.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\bahan_dan_alat.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\nbproject\build-impl.xml C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\test\Tampilan.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\nbproject\project.xml C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\login.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\dokter.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\pasien.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\dashboard.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\treatment_layanan.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\pasien.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\data_supplier.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\logo\logo.jpg C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\produk.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\bahan_dan_alat.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\dokter.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\koneksi\koneksi.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\build.xml C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\treatment_layanan.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\login.java C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\test\Tampilan.form C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\manifest.mf C:\Users\Jonathan\Downloads\klinik - Copy\klinik - Copy\src\form\dashboard.java
+Commit Log
+revision   : e5ae20e1be83ee0bbb521ae5b5a196e6f18ac046
+author     : jo <tuntaskanlahtugas@gmail.com>
+date       : Apr 26, 2026 10:13:17 AM
+summary    : tampilanform2
+
+INFO: End of Commit
+
+==[IDE]== Apr 26, 2026 10:13:17 AM Committing... finished.
+==[IDE]== Apr 26, 2026 10:13:33 AM Pushing - klinik - Copy
+git branch
+git remote -v
+setting up remote: origin
+git submodule status
+git push https://github.com/Joeangg/TUGAS-KELOMPOK-PEMROGRAM-VISUAL.git refs/heads/master:refs/heads/master
+Remote Repository Updates
+Branch Update : master
+Old Id        : b8b8d6d7c807d99aee3e04ee46b25f4b048f95c5
+New Id        : e5ae20e1be83ee0bbb521ae5b5a196e6f18ac046
+Result        : REJECTED_NONFASTFORWARD
+Local Repository Updates
+Branch Add : origin/master
+Id         : e5ae20e1be83ee0bbb521ae5b5a196e6f18ac046
+Result     : NOT_ATTEMPTED
+
+==[IDE]== Apr 26, 2026 10:13:36 AM Setting Tracked Branch
+==[IDE]== Apr 26, 2026 10:13:38 AM Pushing - klinik - Copy finished.
+git branch --set-upstream-to origin/master master
+==[IDE]== Apr 26, 2026 10:13:40 AM Setting Tracked Branch finished.
