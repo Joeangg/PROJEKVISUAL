@@ -10,8 +10,8 @@ public class kasir extends javax.swing.JFrame {
     public kasir() {
         initComponents();
          kosong();
-        aktif();
-        datatable();
+         aktif();
+         datatable();
 }
     protected void aktif(){
         txtid.requestFocus();
@@ -50,7 +50,9 @@ tabmode = new DefaultTableModel(null, Baris);
                 hasil.getString(2),
                 hasil.getString(3),
                 hasil.getString(4),
-                hasil.getString(5)
+                hasil.getString(5),
+                hasil.getString(6),
+                hasil.getString(7)    
             });
         }
 
@@ -61,9 +63,7 @@ tabmode = new DefaultTableModel(null, Baris);
             "Data gagal dipanggil: " + e);
     }
 }
-
-
-    
+   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -113,11 +113,23 @@ tabmode = new DefaultTableModel(null, Baris);
 
         jLabel7.setText("Alamat");
 
-        txtid.setText("jTextField1");
+        txtid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtidActionPerformed(evt);
+            }
+        });
 
-        txtnm.setText("jTextField1");
+        txtnm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtnmActionPerformed(evt);
+            }
+        });
 
-        txttelp.setText("jTextField1");
+        txttelp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txttelpActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(rlaki);
         rlaki.setText("laki-laki");
@@ -186,6 +198,16 @@ tabmode = new DefaultTableModel(null, Baris);
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tblksr.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblksrMouseClicked(evt);
+            }
+        });
+        tblksr.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tblksrKeyPressed(evt);
+            }
+        });
         jScrollPane2.setViewportView(tblksr);
 
         jLabel9.setText("password");
@@ -230,10 +252,9 @@ tabmode = new DefaultTableModel(null, Baris);
                                         .addGap(43, 43, 43)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(txtpassword, javax.swing.GroupLayout.DEFAULT_SIZE, 423, Short.MAX_VALUE)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jScrollPane1)
-                                                .addComponent(cbagama, 0, 423, Short.MAX_VALUE)
-                                                .addComponent(txttelp)))
+                                            .addComponent(jScrollPane1)
+                                            .addComponent(cbagama, 0, 423, Short.MAX_VALUE)
+                                            .addComponent(txttelp))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(bhapus, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -328,17 +349,17 @@ if (jk == null) {
     return; 
 }
 
-        String sql ="insert into barang value (?,?,?,?,?,?,?)";
+String sql = "insert into kasir values (?,?,?,?,?,?,?)";
 try{
-    PreparedStatement stat = conn.prepareStatement(sql);
-    stat.setString(1, txtid.getText());
-    stat.setString(2, txtnm.getText());
-    stat.setString(3, cbagama.getSelectedItem().toString());
-    stat.setString(4, txttelp.getText());
-    stat.setString(5, txtalamat.getText());
-    stat.setString(6, jk);
-    String pass = new String(txtpassword.getPassword());
-    stat.setString(7,pass);
+        PreparedStatement stat = conn.prepareStatement(sql);
+stat.setString(1, txtid.getText());     
+stat.setString(2, txtnm.getText());     
+stat.setString(3, jk);                  
+stat.setString(4, txttelp.getText());   
+stat.setString(5, cbagama.getSelectedItem().toString()); 
+stat.setString(6, txtalamat.getText()); 
+String pass = new String(txtpassword.getPassword());
+stat.setString(7, pass);               
     
     
     stat.executeUpdate();
@@ -354,37 +375,36 @@ datatable();
     }//GEN-LAST:event_bsimpanActionPerformed
 
     private void bubahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bubahActionPerformed
-   String jk = null;
+String jk = null;
 if (rlaki.isSelected()) {
     jk = "Laki-Laki";
 } 
 else if (rperempuan.isSelected()) {
     jk = "Perempuan";
 }
-
-if (jk == null) {
-    JOptionPane.showMessageDialog(null, "Pilih jenis kelamin terlebih dahulu");
-    return;
-}
-
         try{
-       String sql ="update kasir set nmkasir=?,jk=?,no.telp=?,agama=?,alamat=?,password=? where id_kasir='"+txtid.getText()+"'";
-        PreparedStatement stat = conn.prepareStatement(sql);
-        stat.setString(1, txtid.getText());
-        stat.setString(2, txtnm.getText());
-        stat.setString(3, txttelp.getText());
-        stat.setString(4, txtalamat.getText());
-         stat.setString(5, cbagama.getSelectedItem().toString());
-           String pass = new String(txtpassword.getPassword());
-    stat.setString(6,pass);
-     stat.setString(7, jk);
-         stat.executeUpdate();
+       String sql = "update kasir set nmkasir=?,jk=?,`no.telp`=?,agama=?,alamat=?,password=? where id_kasir='"+txtid.getText()+"'";
+        
+       PreparedStatement stat = conn.prepareStatement(sql);
+        
+        
+stat.setString(1, txtnm.getText());     
+stat.setString(2, jk);                  
+stat.setString(3, txttelp.getText());   
+stat.setString(4, cbagama.getSelectedItem().toString()); 
+stat.setString(5, txtalamat.getText()); 
+String pass = new String(txtpassword.getPassword());
+stat.setString(6, pass); 
+        
+         
+          stat.executeUpdate();
           JOptionPane.showMessageDialog(null,"data berhasil di ubah");
           kosong();
           txtid.requestFocus();
    }
    catch(SQLException e){
-       JOptionPane.showMessageDialog(null," data gagal di ubah"+e);
+    JOptionPane.showMessageDialog(null,
+        "data gagal diubah: " + e.getMessage());
        
    }
    datatable();
@@ -392,27 +412,38 @@ if (jk == null) {
     }//GEN-LAST:event_bubahActionPerformed
 
     private void bhapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bhapusActionPerformed
-int ok=JOptionPane.showConfirmDialog(null,"hapus","konformasi dialog",JOptionPane.YES_NO_CANCEL_OPTION);   
-if(ok==0){
-    String sql ="delete from barang where kd_brg ="+txtid.getText()+"'";
-    try{
-      PreparedStatement stat = conn.prepareStatement(sql);
-      stat.executeUpdate();
-      kosong();
-          txtid.requestFocus();
-    }
-    catch(SQLException e){
-        JOptionPane.showMessageDialog(null, "data gagal dihapus"+e);
+ int ok = JOptionPane.showConfirmDialog(
+        null,
+        "Hapus data ini?",
+        "Konfirmasi",
+        JOptionPane.YES_NO_OPTION
+);
+if (ok == JOptionPane.YES_OPTION) {
+    String sql = "DELETE FROM kasir WHERE id_kasir = ?";
+    
+    try {
+        PreparedStatement stat = conn.prepareStatement(sql);
+        stat.setString(1, txtid.getText());
+        stat.executeUpdate();
+        JOptionPane.showMessageDialog(
+                null,
+                "Data berhasil dihapus"
+        );
+        kosong();
+        txtid.requestFocus();
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(
+                null,
+                "Data gagal dihapus: " + e.getMessage()
+        );
     }
     datatable();
 }
-        // TODO add your handling code here:
     }//GEN-LAST:event_bhapusActionPerformed
 
     private void bbatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bbatalActionPerformed
 kosong();
-datatable();        // TODO add your handling code here:
-        // TODO add your handling code here:
+datatable();        
     }//GEN-LAST:event_bbatalActionPerformed
 
     private void bkeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bkeluarActionPerformed
@@ -421,8 +452,49 @@ dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_bkeluarActionPerformed
 
     private void bcariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcariActionPerformed
-        // TODO add your handling code here:
+datatable();        // TODO add your handling code here:
     }//GEN-LAST:event_bcariActionPerformed
+
+    private void txtidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtidActionPerformed
+
+    private void txtnmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnmActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtnmActionPerformed
+
+    private void txttelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttelpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txttelpActionPerformed
+
+    private void tblksrKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tblksrKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tblksrKeyPressed
+
+    private void tblksrMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblksrMouseClicked
+int bar = tblksr.getSelectedRow();
+if (bar != -1) {
+    String a = tabmode.getValueAt(bar, 0).toString(); 
+    String b = tabmode.getValueAt(bar, 1).toString(); 
+    String c = tabmode.getValueAt(bar, 2).toString(); 
+    String d = tabmode.getValueAt(bar, 3).toString(); 
+    String e = tabmode.getValueAt(bar, 4).toString(); 
+    String f = tabmode.getValueAt(bar, 5).toString(); 
+    String g = tabmode.getValueAt(bar, 6).toString(); 
+
+    txtid.setText(a);
+    txtnm.setText(b);
+    if ("laki-laki".equalsIgnoreCase(c)) {
+        rlaki.setSelected(true);
+    } else {
+        rperempuan.setSelected(true);
+    }
+    txttelp.setText(d);
+    cbagama.setSelectedItem(e);
+    txtalamat.setText(f);
+    txtpassword.setText(g);
+}        
+    }//GEN-LAST:event_tblksrMouseClicked
 
     /**
      * @param args the command line arguments

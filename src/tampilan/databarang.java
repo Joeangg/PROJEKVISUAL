@@ -371,7 +371,7 @@ datatable();
     private void bhapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bhapusActionPerformed
 int ok=JOptionPane.showConfirmDialog(null,"hapus","konformasi dialog",JOptionPane.YES_NO_CANCEL_OPTION);   
 if(ok==0){
-    String sql ="delete from barang where kd_brg ="+kdbrg.getText()+"'";
+    String sql ="delete from barang where kd_brg ="+kdbrg.getText()+" ";
     try{
       PreparedStatement stat = conn.prepareStatement(sql);
       stat.executeUpdate();
