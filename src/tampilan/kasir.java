@@ -17,7 +17,6 @@ public class kasir extends javax.swing.JFrame {
         txtid.requestFocus();
     }
     protected void kosong(){
-     txtid.setText("");
      txtnm.setText("");
      txttelp.setText("");
      cbagama.setSelectedItem("");   

@@ -26,7 +26,7 @@ public class pelanggan extends javax.swing.JFrame{
  }
 protected void datatable (){
      Object[] Baris = {
-        "ID Pelanggan",
+        "id_Pelanggan",
         "Nama",
         "Jenis Kelamin",
         "No.Telepon",
@@ -179,13 +179,13 @@ tabmode = new DefaultTableModel(null, Baris);
 
         tblplgn.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID pelangan", "Nama pelangan", "Jenais kelamin", "no.telp", "alamat"
             }
         ));
         tblplgn.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -199,6 +199,10 @@ tabmode = new DefaultTableModel(null, Baris);
             }
         });
         jScrollPane2.setViewportView(tblplgn);
+        if (tblplgn.getColumnModel().getColumnCount() > 0) {
+            tblplgn.getColumnModel().getColumn(2).setResizable(false);
+            tblplgn.getColumnModel().getColumn(4).setResizable(false);
+        }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -248,8 +252,8 @@ tabmode = new DefaultTableModel(null, Baris);
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(367, Short.MAX_VALUE))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 682, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
