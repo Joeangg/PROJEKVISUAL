@@ -329,6 +329,11 @@ public void cetak(){
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tbltransaksi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbltransaksiMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(tbltransaksi);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -634,6 +639,10 @@ dispose();
     aktif();
     autonumber();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void tbltransaksiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbltransaksiMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tbltransaksiMouseClicked
  public void itemTerpilihBrg(){
         popupbarang Pbrg = new popupbarang();
         Pbrg.brg = this;
